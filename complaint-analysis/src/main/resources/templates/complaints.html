@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::section}, 'Pengaduan Masyarakat')}">
+<head>
+    <title>Pengaduan Masyarakat</title>
+</head>
+<body>
+    <section>
+        <div class="complaint-form">
+            <h2>Formulir Pengaduan</h2>
+            <form id="complaintForm">
+                <div class="form-group">
+                    <label for="title">Judul Pengaduan</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Deskripsi</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="category">Kategori</label>
+                    <select id="category" name="category" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Infrastruktur">Infrastruktur</option>
+                        <option value="Lingkungan">Lingkungan</option>
+                        <option value="Kesehatan">Kesehatan</option>
+                        <option value="Keamanan">Keamanan</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Lokasi</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="reporterName">Nama Pelapor</label>
+                    <input type="text" id="reporterName" name="reporterName" required>
+                </div>
+                <div class="form-group">
+                    <label for="reporterContact">Kontak</label>
+                    <input type="text" id="reporterContact" name="reporterContact" required>
+                </div>
+                <button type="submit">Kirim Pengaduan</button>
+            </form>
+        </div>
+
+        <div class="complaint-list">
+            <h2>Daftar Pengaduan</h2>
+            <div id="complaintList"></div>
+        </div>
+
+        <div class="analysis-section">
+            <h2>Analisis Data</h2>
+            <div>
+                <h3>Distribusi Kategori</h3>
+                <div class="chart-container">
+                    <canvas id="categoriesChart"></canvas>
+                </div>
+            </div>
+            <div>
+                <h3>Tren Pengaduan</h3>
+                <div class="chart-container">
+                    <canvas id="trendsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
