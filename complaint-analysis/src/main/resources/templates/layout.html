@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title} + ' | Sistem Pengaduan'">Sistem Pengaduan</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sistem Analisis Pengaduan Masyarakat</h1>
+    </header>
+    <main>
+        <div th:replace="${content}"></div>
+    </main>
+    <footer>
+        <p>© 2023 Sistem Pengaduan Masyarakat</p>
+    </footer>
+</body>
+</html>
